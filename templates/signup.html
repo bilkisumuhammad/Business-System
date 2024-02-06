@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/styles.css'%}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        {% for message in messages %}
+        <h4 style="color:red;">{{message}}</h4>
+        {% endfor %}
+        <form method="POST">
+            {% csrf_token %}
+            {% for field in signup %}
+            {{field}}
+            {% endfor %}
+         <button type="submit">Sign Up</button>
+        </form>
+        <div class="terms">
+            <input type="checkbox" name="" id="checkbox">
+            <label for="checkbox">I agree to these<a href="#">Terms & Condition</a></label>
+        </div>
+    </div>
+</body>
+</html>

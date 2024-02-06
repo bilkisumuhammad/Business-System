@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Management</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="{% static '/styles.css'%}"> 
+<body>
+    <header>
+        <div class="logo">
+        <h2>Business Management system</h2>
+    </div>
+        <div class="nav">
+            <a href="$">Home</a>
+            <a href="asset.html">Asset</a>
+            <a href="scrap supply.html">Scrap Supply</a>
+            <a href="{% url 'business_management' %}">Business</a>
+            <a href="{% url 'login' %}"><i class="fas fa-user"></i> Login</a>
+        </div>
+    </header>
+    <section>
+    <div class="hero">
+        <img src="/static/img/IMG-20240201-WA0003.jpg" alt="">
+    </div>
+</section>
+    <footer>
+     <p>copyright;2024 Multi-business management system</p>
+     <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+    </div>     
+    </footer>
+</body>
+</html>

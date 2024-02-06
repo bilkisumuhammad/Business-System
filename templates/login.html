@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/styles.css'%}">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        {% for message in messages %}
+        <h4 style="color:red;">{{message}}</h4>
+        {% endfor %}
+        <form method="POST">
+            {% csrf_token %}
+            {% for field in login %}
+            {{field}}
+            {% endfor %}
+            <div class="recover">
+                <a href="{% url 'signup'%}">Forget Password</a>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+            <div class="recover">
+            <a href="{% url 'signup' %}">Register here</a>
+        </div>
+            </div>
+                
+            </body>
