@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrap Supply Management</title>
+    <link rel="stylesheet" href="{% static 'SS.css' %}">
+
+</head>
+<body>
+    <header>
+        <h1>Scrap Supply Management</h1>
+    </header>
+    <section class="dashboard">
+        <div class="dashboard-item">
+            <h2>Add Delivery Details</h2>
+            <p>Track goods supplied to companies.</p>
+            <a href="/scrap_supply_management/add_delivery/">Add Delivery</a>
+        </div>
+
+        <div class="dashboard-item">
+            <h2>Display Total Cost</h2>
+            <p>View the total cost of supplied material.</p>
+            <a href="/scrap_supply_management/display_total_cost/">Display Total Cost</a>
+        </div>
+
+        <div class="dashboard-item">
+            <h2>Handle Payments</h2>
+            <p>Manage payments from companies.</p>
+            <a href="/scrap_supply_management/handle_payments/">Handle Payments</a>
+        </div>
+
+        <div class="dashboard-item">
+            <h2>Generate Ledger Reports</h2>
+            <p>View ledger reports for each company.</p>
+            <a href="/scrap_supply_management/generate_ledger_reports/">Generate Reports</a>
+        </div>
+    </section>
+    <footer>
+        <!-- Footer content -->
+    </footer>
+</body>
+</html>
+

@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'asset',
     'business_management',
-    'scrap',
     'login',
+    'scrap_supply_management',
     
 ]
 

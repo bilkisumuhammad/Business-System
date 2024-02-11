@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ScrapConfig(AppConfig):
+class ScrapSupplyManagementConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'scrap'
+    name = 'scrap_supply_management'

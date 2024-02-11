@@ -11,12 +11,14 @@
 
 <body>
     <header>
-        <h1>Business Management</h1>
+        <h1>Create Business</h1>
     </header>
     <section>
         <div class="bm">
             <h2>Add Business</h2>
-            <form action="/add_business" method="post">
+            {{ business_form.as_p }}
+            <form action="{% url 'create_business' %}" method="post">
+                {% csrf_token %}
                 <!-- Business form elements -->
                 <label for="name">Business Name:</label>
                 <input type="text" id="name" name="name" placeholder="" required>
@@ -37,7 +39,8 @@
 
         <div>
             <h2>Add Business Category</h2>
-            <form action="/add_category" method="post">
+            <form action="{% url 'create_business' %}" method="post">
+                {% csrf_token %}
                 <!-- Business Category form elements -->
                 <label for="categoryName">Category Name:</label>
                 <input type="text" id="categoryName" name="categoryName" placeholder="New Category" required>
@@ -48,7 +51,8 @@
 
         <div>
             <h2>Add Cost Invested</h2>
-            <form action="/add_cost" method="post">
+            <form action="{% url 'create_business' %}" method="post">
+                {% csrf_token %}
                 <!-- Cost Invested form elements -->
                 <label for="business">Business Name:</label>
                 <!-- Add dropdown or select input for businesses -->
