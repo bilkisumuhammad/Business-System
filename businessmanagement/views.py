@@ -12,3 +12,5 @@ def business_management(request):
     return render(request,"business_management.html")
 def add_company(request):
     return render(request,"add_company.html" )
+def asset_management(request):
+    return render(request,"asset_management.html")
