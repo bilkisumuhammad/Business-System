@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from businessmanagement.views import business, business_management, asset_management
+from businessmanagement.views import business, business_management
+from businessmanagement.views import  asset_management, scrap_supply_management
 from login.views import signup, user_login
 
 
@@ -28,6 +29,8 @@ urlpatterns = [
     path('account/', include('login.urls')), 
     path('business_management/', include('business_management.urls')), 
     path('asset_management/', include('asset_management.urls')),
+    path('scrap_supply_management/', include('scrap_supply_management.urls')),
+
     
       
     
