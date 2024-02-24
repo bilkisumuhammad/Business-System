@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- handle_payments.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Handle Payments for {{ company.name }}</h2>
+  
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit Payment</button>
+  </form>
+
+  <h3>Total Credit Cost: ${{ company.total_credit_cost }}</h3>
+{% endblock %}
+
+</body>
+</html>

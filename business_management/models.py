@@ -14,7 +14,7 @@ class CostInvested(models.Model):
         return f"${self.amount}" 
     
 class Business(models.Model):
-    nams = models.CharField(max_length=225,verbose_name='Business Name')
+    name = models.CharField(max_length=225,verbose_name='Business Name')
     category = models.ForeignKey(BusinessCategory,on_delete=models.CASCADE,verbose_name='Business Category') 
     location = models.CharField(max_length=225,verbose_name='Location')
     cost_invested= models.ForeignKey(CostInvested,on_delete=models.CASCADE,verbose_name='Cost Invested')

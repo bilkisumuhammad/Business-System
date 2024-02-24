@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asste_list</title>
+</head>
+<body>
+    <div>
+        {% for asset in assets %}
+        {{asset.name}}- {{asset.total_amount}}<br>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>

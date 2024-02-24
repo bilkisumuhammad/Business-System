@@ -16,6 +16,7 @@
         <form method="POST">
             {% csrf_token %}
             {% for field in login %}
+            <label for="{{ field.id_for_label }}">{{ field.label}}:</label>
             {{field}}
             {% endfor %}
             <div class="recover">

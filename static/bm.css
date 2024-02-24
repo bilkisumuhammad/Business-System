@@ -56,6 +56,43 @@ button {
 button:hover {
     background-color: #45a049;
 }
+/* SS.css or your stylesheet file */
+
+.material-details-form {
+    /* Add your styling rules for this specific div */
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.material-details-form h2 {
+    /* Additional styling for the h2 element inside this div */
+    color: #333;
+    font-size: 24px;
+    /* Add more styles as needed */
+}
+
+.material-details-form form {
+    /* Additional styling for the form element inside this div */
+    margin-top: 15px;
+    /* Add more styles as needed */
+}
+
+.material-details-form input[type="submit"] {
+    /* Additional styling for the submit button inside this div */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.material-details-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
 
 footer {
     text-align: center;

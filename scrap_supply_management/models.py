@@ -3,8 +3,13 @@ from django.db import models
 class Company(models.Model):
     name = models.CharField(max_length=255)
 
-def __str__(self):
-    return self.name
+    def __str__(self):
+        return self.name
+
+    def calculate_total_cost(self):
+        material_deliveries = MaterialDelivery.objects.filter(company=self)
+        total_cost = sum(delivery.total_cost for delivery in material_deliveries)
+        return total_cost
 
 class MaterialDelivery(models.Model):
     company = models.ForeignKey(Company,on_delete=models.CASCADE)
@@ -17,3 +22,4 @@ class MaterialDelivery(models.Model):
 
     def __str__(self):
         return f"{self.company} - {self.delivery_date}"
+        

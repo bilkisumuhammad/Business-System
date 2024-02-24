@@ -12,18 +12,41 @@
     <header>
         <h1>Scrap Supply Management</h1>
     </header>
-    <section class="dashboard">
+
+
+    
+        <div class="dashboard-item">
+            <h2>Add Company</h2>
+            <p>Track goods supplied to companies.</p>
+            <form method="post">
+                {% csrf_token %}
+                {{form}}
+                <input type="submit" value="Add" />
+            </form>
+        </div>
+
+        
+        <section class="dashboard">
         <div class="dashboard-item">
             <h2>Add Delivery Details</h2>
             <p>Track goods supplied to companies.</p>
-            <a href="/scrap_supply_management/add_delivery/">Add Delivery</a>
+            <a href="{% url 'add_material' %}">Add Delivery</a>
         </div>
 
+        
+        <!-- Your main template (scrap_supply_management.html) -->
+    <!-- Your main template (scrap_supply_management.html) -->
+<div class="dashboard">
+    {% if companies %}
         <div class="dashboard-item">
             <h2>Display Total Cost</h2>
-            <p>View the total cost of supplied material.</p>
-            <a href="/scrap_supply_management/display_total_cost/">Display Total Cost</a>
+            <p>View the total cost of supplied material for {{ companies.0.name }}.</p>
+            <a href="{% url 'display_total_cost' company_id=companies.0.id %}">Display Total Cost</a>
         </div>
+    {% endif %}
+</div>
+
+
 
         <div class="dashboard-item">
             <h2>Handle Payments</h2>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- generate_ledger_reports.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Ledger Report for {{ company.name }}</h2>
+
+  <h3>Material Deliveries:</h3>
+  <ul>
+    {% for delivery in deliveries %}
+      <li>{{ delivery.delivery_date }} - Weight: {{ delivery.weight_kg }} kg, Cost: ${{ delivery.total_cost }}</li>
+    {% endfor %}
+  </ul>
+
+  <h3>Payments:</h3>
+  <ul>
+    {% for payment in payments %}
+      <li>{{ payment.payment_date }} - Amount: ${{ payment.amount }}</li>
+    {% endfor %}
+  </ul>
+
+  <h3>Total Credit Cost: ${{ company.total_credit_cost }}</h3>
+{% endblock %}
+
+</body>
+</html>

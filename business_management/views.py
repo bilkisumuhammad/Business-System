@@ -6,6 +6,10 @@ def business_management(request):
 
 
 def create_business(request):
+    business_form = BusinessForm()
+    category_form = BusinessCategoryForm()
+    cost_form = CostInvestedForm
+
     if request.method == 'POST':
         business_form = BusinessForm(request.POST,prefix='business')
         category_form = BusinessCategoryForm(request.POST,prefix='category')
@@ -28,4 +32,4 @@ def create_business(request):
             category_form = BusinessCategoryForm(prefix='category')
             cost_form = CostInvestedForm(prefix='cost')
 
-            return render(request,'business.html',{'business_form':business_form, 'category_form':category_form, 'cost_form':cost_form})   
+    return render(request,'business.html',{'business_form':business_form, 'category_form':category_form, 'cost_form':cost_form})   

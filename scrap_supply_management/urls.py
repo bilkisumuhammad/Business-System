@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import scrap_supply_management
-from .views import add_company
+from .views import add_material_details, scrap_supply, display_total_cost
 
 urlpatterns = [
-path('scrap_supply_management/', scrap_supply_management, name='scrap_supply_management'),
-path('add_company/', add_company, name='add_company'),
+    path('', scrap_supply, name='scrap_supply'),
+    path('add_material/', add_material_details, name='add_material'),
+    path('display_total_cost/<int:company_id>/', display_total_cost, name='display_total_cost'),
 ]
