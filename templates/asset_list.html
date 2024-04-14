@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asste_list</title>
+    <title>Asset List</title>
 </head>
 <body>
     <div>
-        {% for asset in assets %}
-        {{asset.name}}- {{asset.total_amount}}<br>
-        {% endfor %}
+        <h2>Owned Assets</h2>
+        <ul>
+            {% for asset in assets %}
+                <li>
+                    {{ asset.name }}
+                    <a href="{% url 'asset_details' asset.id %}">Show Details</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'asset_management' %}">Go to Asset Management</a>
     </div>
-    
 </body>
 </html>

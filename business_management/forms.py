@@ -1,23 +1,22 @@
 from django import forms
-from.models import BusinessCategory,CostInvested,Business
+from .models import BusinessCategory,CostInvested,Business
 
 class BusinessCategoryForm(forms.ModelForm):
     class Meta:
         model = BusinessCategory
-        fields = ['name','description']
+        fields = '__all__' 
 
 class CostInvestedForm(forms.ModelForm):
     class Meta:
         model = CostInvested
-        fields = ['amount']
-
+        fields = '__all__' 
 
 class BusinessForm(forms.ModelForm):
-    class Mete:
+    class Meta:
         model = Business
-        fields = ['name','category','location','cost_invested']
+        fields = '__all__' 
 
         def __init__(self, *args,**Kwargs):
-                    super().__init__(*args,**Kwargs)
-                    self.fields['category'].queryset = BusinessCategory.objects.all()                
-                              
+            super().__init__(*args,**Kwargs)
+            self.fields['category'].queryset = BusinessCategory.objects.all()                
+     

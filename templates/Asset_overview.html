@@ -1,0 +1,67 @@
+<!-- asset_overview.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Overview</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'asset_overview.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Asset Overview</h1>
+    </header>
+    <section>
+        <div class="asset-info">
+            <h2>Your Assets</h2>
+            <!-- Display a summary of owned assets -->
+            <ul>
+                {% for asset in owned_assets %}
+
+                    <li>
+                        {{ asset.name }} - ${{ asset.total_amount }} - 
+
+                        <button onclick="showDetails('{{ asset.name }}',  {{ asset.total_amount }},    {{ asset.additional_costs }})">Show Details</button>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="asset-details" id="assetDetails">
+            <!-- Asset details will be displayed here -->
+        </div>
+
+        <div class="go-to-main" id="goToMain" onclick="goToMainPage()">
+            <p>Go to Main Page</p>
+        </div>
+    </section>
+    <footer>
+        
+    </footer>
+
+    <script>
+        function showDetails(assetName, price, cost) {
+            // Display details for the selected asset
+            document.getElementById('assetDetails').innerHTML = `
+                <p>Details for ${assetName}</p>
+                <p>Price: $${price}</p>
+                <p>Cost: $${cost}</p>
+                <button onclick="goToAddAsset()">Add Asset</button>
+            `;
+        }
+    
+        function goToMainPage() {
+            // Redirect to the main asset management page
+            window.location.href = "{% url 'asset_management' %}";
+        }
+    
+        function goToAddAsset() {
+            // Redirect to the page where assets can be added
+            window.location.href = "{% url 'add_asset' %}";
+        }
+    </script>
+
+       
+</body>
+</html>

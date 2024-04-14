@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=action, initial-scale=1.0">
+    <title>Business</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bm.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>Create Business</h1>
+    </header>
+    <section>
+        <div class="bm">
+            <h2>Add Business</h2>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <!-- Business form elements -->
+                <label for="name">Business Name:</label>
+                {{ business_form.as_p }}            
+                <button type="submit">Add Business</button>
+            </form>
+        </div>
+
+        <div>
+            <h2>Add Business Category</h2>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <!-- Business Category form elements -->
+                <label for="categoryName">Category Name:</label>
+                {{category_form}}
+                <button type="submit">Add Category</button>
+            </form>
+        </div>
+
+        <div>
+            <h2>Add Cost Invested</h2>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <!-- Cost Invested form elements -->
+                <label for="business">Business Name:</label>
+                <!-- Add dropdown or select input for businesses -->
+
+                <label for="amount">Amount Invested:</label>
+                {{cost_form}}
+
+                <button type="submit">Add Cost</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
+
+    
+</body>--
+</html>

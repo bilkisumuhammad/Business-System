@@ -1,7 +1,6 @@
-/* SS.css or your stylesheet file */
+
 
 .material-details-form {
-    /* Center the text and form */
     text-align: center;
 
     background-color: #f2f2f2;
@@ -16,7 +15,6 @@
 }
 
 .material-details-form form {
-    /* Center the form inside the div */
     margin: auto;
     max-width: 300px; 
     margin-top: 15px;
@@ -26,11 +24,10 @@
 .material-details-form form input,
 .material-details-form form select,
 .material-details-form form textarea {
-    /* Add space between form inputs */
     display: block;
-    width: 100%; /* Make inputs full-width */
+    width: 100%; 
     margin-bottom: 10px;
-    /* Adjust the margin-bottom as needed */
+    
 }
 
 .material-details-form input[type="submit"] {
@@ -47,14 +44,8 @@
 }
 
 
-
-/* SS.css or your stylesheet file */
-
 .add-asset-form {
-    /* Center the text and form */
     text-align: center;
-
-    /* Additional styling rules for the div */
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
@@ -62,23 +53,18 @@
 }
 
 .add-asset-form h2 {
-    /* Additional styling for the h2 element inside this div */
     color: #333;
     font-size: 24px;
-    /* Add more styles as needed */
 }
 
 .add-asset-form form {
-    /* Center the form inside the div */
     margin: auto;
-    max-width: 400px; /* Adjust the max-width as needed */
-    /* Additional styling for the form element inside this div */
+    max-width: 400px; 
     margin-top: 15px;
-    /* Add more styles as needed */
+    
 }
 
 .add-asset-form form button {
-    /* Additional styling for the submit button inside this div */
     background-color: #033747;
     color: white;
     padding: 10px 15px;

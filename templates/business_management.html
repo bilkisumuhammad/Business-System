@@ -7,61 +7,21 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'bm.css' %}">
 </head>
-    <!-- business_management.html -->
 
 <body>
     <header>
-        <h1>Create Business</h1>
+        <h1>Business Management</h1>
     </header>
     <section>
-        <div class="bm">
-            <h2>Add Business</h2>
-            {{ business_form.as_p }}
-            <form action="{% url 'create_business' %}" method="post">
-                {% csrf_token %}
-                <!-- Business form elements -->
-                <label for="name">Business Name:</label>
-                <input type="text" id="name" name="name" placeholder="" required>
-
-                <label for="category">Business Category:</label>
-                <select id="category" name="category"  required>
-                    <option value="Retail">Retail</option>
-                    <option value="Real Estate">Real Estate</option>
-                    <option value="Technology">Technology</option>
-                    <option value="Food">Food</option>
-
-                <label for="location">Location:</label>
-                <input type="text" id="location" name="location" placeholder="" required>
-
-                <button type="submit">Add Business</button>
-            </form>
-        </div>
 
         <div>
-            <h2>Add Business Category</h2>
-            <form action="{% url 'create_business' %}" method="post">
-                {% csrf_token %}
-                <!-- Business Category form elements -->
-                <label for="categoryName">Category Name:</label>
-                <input type="text" id="categoryName" name="categoryName" placeholder="New Category" required>
+            <h2>Create Business</h2>
+            
 
-                <button type="submit">Add Category</button>
-            </form>
-        </div>
-
-        <div>
-            <h2>Add Cost Invested</h2>
-            <form action="{% url 'create_business' %}" method="post">
-                {% csrf_token %}
-                <!-- Cost Invested form elements -->
-                <label for="business">Business Name:</label>
-                <!-- Add dropdown or select input for businesses -->
-
-                <label for="amount">Amount Invested:</label>
-                <input type="number" id="amount" name="amount" placeholder="10000.00" required>
-
-                <button type="submit">Add Cost</button>
-            </form>
+                <button>
+                    <a href="{% url 'create_business' %}" >Create Business</a>
+                </button>
+            
         </div>
     </section>
 

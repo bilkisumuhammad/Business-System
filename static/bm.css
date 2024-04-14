@@ -1,4 +1,4 @@
-/* styles.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +6,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* General styles for all pages */
 header {
     background-color: #033747;
     color: white;
@@ -56,10 +55,8 @@ button {
 button:hover {
     background-color: #45a049;
 }
-/* SS.css or your stylesheet file */
 
 .material-details-form {
-    /* Add your styling rules for this specific div */
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
@@ -67,20 +64,17 @@ button:hover {
 }
 
 .material-details-form h2 {
-    /* Additional styling for the h2 element inside this div */
     color: #333;
     font-size: 24px;
-    /* Add more styles as needed */
 }
 
 .material-details-form form {
-    /* Additional styling for the form element inside this div */
+    
     margin-top: 15px;
-    /* Add more styles as needed */
+    
 }
 
 .material-details-form input[type="submit"] {
-    /* Additional styling for the submit button inside this div */
     background-color: #4CAF50;
     color: white;
     padding: 10px 15px;

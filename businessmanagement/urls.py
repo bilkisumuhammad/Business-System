@@ -16,20 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from businessmanagement.views import business, business_management
+from businessmanagement.views import business,business_management
 from businessmanagement.views import  asset_management, scrap_supply_management
-from login.views import signup, user_login
+from login.views import user_login
 
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',business, name='business'), # Name added for the business view
+    path('', user_login, name='login'),
     path('account/', include('login.urls')), 
     path('business_management/', include('business_management.urls')), 
     path('asset_management/', include('asset_management.urls')),
     path('scrap_supply_management/', include('scrap_supply_management.urls')),
+    path('business/',business, name='business'),
 
     
       

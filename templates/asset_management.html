@@ -18,29 +18,26 @@
             <form action="{% url 'add_asset' %}" method="post">
 
                 <!-- Asset form elements -->
-                <label for="assetName">Asset Name:</label>
+                <!-- <label for="assetName">Asset Name:</label>
                 <input type="text" id="assetName" name="assetName" placeholder="Asset Name" required>
 
                 <label for="purchasePrice">Purchase Price:</label>
                 <input type="number" id="purchasePrice" name="purchasePrice" placeholder="10000.00" required>
 
                 <label for="additionalCost">Additional Cost:</label>
-                <input type="number" id="additionalCost" name="additionalCost" placeholder="0.00">
-
-                <button type="submit">Add Asset</button>
+                <input type="number" id="additionalCost" name="additionalCost" placeholder="0.00"> -->
                 {% csrf_token %}
+                <button type="submit">Add Asset</button>
                 {{form}}
             </form>
         </div>
 
         <div>
             <h2>View Owned Assets</h2>
-            <!-- Display a summary of owned assets -->
             <ul>
                 {% for asset in owned_assets %}
                 <li>Asset 1 - Total Amount: ${{ asset.total_amount}}</li>
                 <li>Asset 2 - Total Amount: $15,500.00</li>
-                <!-- Add dynamic content based on owned assets -->
                 {% endfor %}
             </ul>
         </div>
@@ -50,7 +47,6 @@
             <form action="" method="post">
                 <!-- Additional cost form elements -->
                 <label for="assetSelection">Select Asset:</label>
-                <!-- Add dropdown or select input for owned assets -->
 
                 <label for="additionalCost">Additional Cost:</label>
                 <input type="number" id="additionalCost" name="additionalCost" placeholder="0.00" required>
@@ -58,11 +54,13 @@
                 <button type="submit">Add Additional Cost</button>
                 {% csrf_token %}
                 {{form}}
+            
             </form>
+            
         </div>
+        
     </section>
     <footer>
-        <!-- Footer content -->
     </footer>
 </body>
 </html>
